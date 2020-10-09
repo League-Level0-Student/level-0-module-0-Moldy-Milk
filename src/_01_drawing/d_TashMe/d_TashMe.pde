@@ -19,25 +19,35 @@ void setup() {
 face = loadImage("face.jpg");
   
 // 3. Set the size of the sketch. Make it big enough to show the face you chose.
-
+size(500,500);
 // 4. Resize the face so it is the same size as the sketch
-
+face.resize(500,500);
 // 5. Drag and drop an image with a mustache onto this sketch. 
 //    Try to find one with a transparent background. Use the same idea as in step 1.
 //    Make sure the file name is correct for the mustache image you saved.  
 mustache = loadImage("mustache.png");
-
+mustache.resize(200,75);
   }
 
 void draw() {
   
 // 6. DRAW FACE.    Use the background() command to make the face the background of the sketch
 //    Run the program to see if the face is drawn. Get this working before you go on.
-  
+  background(face);
 
 // 7. DRAW MUSTACHE. Use the image() command to draw the mustache.  
 //                  The image command looks like this:
-image (mustache, 200,200);
+if (mouseButton==RIGHT){
+  fill(#0A0909);
+  rect(mouseX-100,mouseY-150,200,150);
+  noStroke();
+  rect(mouseX-50,mouseY-100,200,100);
+}
+else if(mousePressed){
+image (mustache, mouseX-100,mouseY-25);
+}
+
+
 //    The numbers specify where to draw the mustache. They represent the top left corner of the image
 //    Run the program to see if the mustache is drawn on the face. Get this working before you go on.
 //    If you need to resize the mustache, do it in the setup() method after you loaded the mustache image.

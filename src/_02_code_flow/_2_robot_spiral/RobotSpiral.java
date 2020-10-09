@@ -12,16 +12,18 @@ public class RobotSpiral {
 	public static void main(String[] args) {
 		
 		// Create a new Robot
-		
+		Robot Molchin= new Robot();
 		// Set your robot's pen down 
-		
+		Molchin.penDown();
 		// SPEED. Set the robot to go at max speed (100)
-
+Molchin.setSpeed(50);
 		// COUNT. Create an int variable that will count how many lines of the spiral we have drawn.
 			//        Start its value as zero.
-
+int counter = 0;
 		// LOOP. Start a while loop to repeat the COLOR, DRAW, TURN, and COUNT code below until 50 lines have been drawn
-
+while(counter<200) {
+	Molchin.setRandomPenColor();
+}
 			// COLOR.   Have the robot set a random pen color:      setRandomPenColor()
 
 			// DRAW.    Move the robot (5*count) pixels
