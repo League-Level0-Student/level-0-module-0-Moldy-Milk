@@ -21,8 +21,12 @@ Molchin.setSpeed(50);
 			//        Start its value as zero.
 int counter = 0;
 		// LOOP. Start a while loop to repeat the COLOR, DRAW, TURN, and COUNT code below until 50 lines have been drawn
-while(counter<200) {
+while(counter<50) {
 	Molchin.setRandomPenColor();
+	Molchin.move(5*counter);
+	Molchin.turn(360/7);
+	counter +=1;
+	Molchin.setPenWidth(counter);
 }
 			// COLOR.   Have the robot set a random pen color:      setRandomPenColor()
 
